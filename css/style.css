@@ -62,6 +62,10 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
+.logo{ 
+ width: 170px;
+}
+
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -8001,7 +8005,10 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #2e9e5b; }
+  color: #2e9e5b; 
+  margin-top: -10px;
+}
+
   a:hover, a:focus {
     text-decoration: none;
     color: #2e9e5b;

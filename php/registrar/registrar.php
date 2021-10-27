@@ -28,7 +28,7 @@
             <div class="wizard-container">
 
                 <div class="card wizard-card" data-color="orange" id="wizardProfile">
-                    <form action="" method="POST">
+                    <form action="logica.php" method="POST">
                 <!--        You can switch ' data-color="orange" '  with one of the next bright colors: "blue", "green", "orange", "red"          -->
 
                     	<div class="wizard-header">
@@ -60,9 +60,9 @@
                                       </div>
                                   </div>
                                   <div class="col-sm-6">
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <input name="rol" type="text" class="form-control" placeholder="rol">
-                                      </div>
+                                      </div> -->
                                       <div class="form-group">
                                         <input name="nombre" type="text" class="form-control" placeholder="Nombre">
                                       </div>
@@ -76,10 +76,15 @@
                                   <div class="col-sm-10 col-sm-offset-1">
                                     <div class="form-group">
                                         <input name="email" type="email" class="form-control" placeholder="Correo Electrónico">
-                                    </div>
+                                    </div>  
+                                  <div class="col-sm-4 col-sm-offset-1">
+                                    <div class="form-group">
+                                        <input name="genero" type="text" class="form-control" placeholder="Genero">                                        
+                                      </div> 
                                     <div class="form-group">
                                         <input name="telefono" type="text" class="form-control" placeholder="Teléfono">
-                                      </div>
+                                      </div>  
+                                  </div>
                                     <div class="form-group">
                                         <input name="direccion" type="text" class="form-control" placeholder="Dirección">
                                       </div> 
@@ -134,12 +139,6 @@
                             <div class="pull-right">
                                 <input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Siguiente' />
                                 <button type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm'  value='Registar'>REGISTRAR</button>
-                                <?php
-		if(isset($_POST['rol'])&&isset($_POST['imagen_u'])&&isset($_POST['nombre'])&&isset($_POST['apellidos'])&&isset($_POST['genero'])&&isset($_POST['email'])&&isset($_POST['telefono'])&&isset($_POST['direccion'])&&isset($_POST['nombre_acudiente'])&&isset($_POST['apellido_acudiente'])&&isset($_POST['telefono_acudiente'])&&isset($_POST['email_acudiente'])&&isset($_POST['username'])&&isset($_POST['password'])){
-			require_once "conexion.php";
-			require_once "logica.php";
-		}
-	?> 
                             </div>
 
                             <div class="pull-left">

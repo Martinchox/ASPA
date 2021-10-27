@@ -6,10 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  
     <link rel="stylesheet" href="login.css">    
-    <link rel="stylesheet" href="../css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
-
-  </head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+                  function mostrarPassword(){
+                     var cambio = document.getElementById("txtPassword");
+                     if(cambio.type == "password"){
+                        cambio.type = "text";
+                        $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+                     }else{
+                        cambio.type = "password";
+                        $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+                     }
+                  }
+      </script>
+      </head>
   <body class="body">
 
   <div>    
@@ -20,21 +31,22 @@
           </div>
         </div>
         <div class="thumbnail">
-        <i class="fa fa-user-o"></i></div>
-        <form class="login-form" method="POST">
-          <input type="text" name="usuario" placeholder="Usuario" required=""/>
+        <i id="user" class="fa fa-user-o"></i></div>
+        <form class="login-form" method="POST" action="logicalogin.php">
+          <input type="text" name="username" placeholder="Usuario" required=""/>
           <div class="col-md-6">
             <div class="input-group">
-          <input id="txtPassword" type="Password" name="password" Class="form-control" placeholder="Contraseña" required="">
+          <input ID="txtPassword" type="password" name="password" Class="form-control" placeholder="Contraseña" required="">
           <div class="input-group-append">
-                <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()" style="background-color: transparent;">
-                <i class="fa fa-eye-slash"></i> </button>
-              </div>
+            <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span id="eye" class="fa fa-eye-slash icon"></span> </button>
+          </div>
         </div>
           </div>      
-          <button>Ingresar</button>
+          <div>
+          <input style=" outline: 0; margin-top:20px; background: #28a745; width: 100%; border: 0; padding: 15px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; color: #FFFFFF; font-size: 14px; transition: all 0.3 ease; cursor: pointer;" type="submit" value="INGRESAR"></input>
+          </div>
         </form>        
-      <p class="message">¿No tienes una cuenta?<a href="../registrar/registrar.html"> Regístrate.</a></p>
+      <p class="message">¿No tienes una cuenta?<a href="../registrar/registrar.php"> Regístrate.</a></p>
       </div>
     </div>
 

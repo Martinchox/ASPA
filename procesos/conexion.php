@@ -1,3 +1,3 @@
 <?php
-$pdo=new PDO('mysql:host=localhost;dbname=aspa_db','root','');
+$pdo=new PDO('mysql:host=localhost;dbname=aspa1.1','root','');
 ?>
